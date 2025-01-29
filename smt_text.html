@@ -6,47 +6,79 @@
     <title>Інформація про замовлення</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 400px;
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
         }
+
         h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
         }
+
         p {
             font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 10px;
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.6;
         }
+
         .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 20px;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
             color: #fff;
-            background-color: #007bff;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(255, 121, 97, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Як оформити замовлення</h1>
-        <p>1. Напишіть мені у чат-бот <strong>@Anna_shoesbags_bot</strong>.</p>
-        <p>2. Надішліть передоплату: 200 грн, решту можна оплатити накладним платежем.</p>
-        <p>3. Надішліть дані для відправки: ПІБ, номер телефону, адреса доставки.</p>
-        <p>4. Заберіть свою посилку вчасно (автоповернення через 6 днів).</p>
-        <a href="https://t.me/Anna_shoesbags_bot" class="button">Написати у бот</a>
+        <h1>Як оформити замовлення 🛍️</h1>
+        <p>1️⃣ Напишіть мені у чат-бот <strong>@barska_olena</strong></p>
+        <p>2️⃣ Передоплата <strong>200 грн</strong>, решту можна оплатити накладним платежем</p>
+        <p>3️⃣ Вкажіть <strong>дані для відправки</strong>: ПІБ, телефон, адресу</p>
+        <p>4️⃣ Заберіть посилку вчасно (автоповернення через 6 днів) 📦</p>
+        <a href="https://t.me/Anna_shoesbags_bot" class="button">💬 Написати у бот</a>
     </div>
+
 </body>
 </html>
