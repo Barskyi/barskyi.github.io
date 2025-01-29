@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .contact-item {
+            margin: 10px 0;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📞 Наші контакти</h2>
+        <p class="contact-item">📲 <b>Телефон:</b> +38 097 461 33 25</p>
+        <p class="contact-item">📧 <b>Email:</b> <a href="mailto:barskyi69@gmail.com">barskyi69@gmail.com</a></p>
+        <p class="contact-item">📸 <b>Instagram:</b> <a href="https://www.instagram.com/insite_bags?igsh=MW41OG9pbzV0cHFvMw==" target="_blank">@insite_bags</a></p>
+        <p class="contact-item">🌐 <b>Офіційний сайт:</b> <a href="https://barbags.com.ua/ua" target="_blank">barbags.com.ua/ua</a></p>
+        <p style="margin-top: 15px; font-style: italic;">💼 Зв’яжіться з нами — ми завжди раді допомогти вам обрати ідеальну сумку чи аксесуар! 😊</p>
+    </div>
+</body>
+</html>
