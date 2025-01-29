@@ -21,12 +21,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             position: relative;
             overflow: hidden;
+            font-size: 14px;
         }
 
-        /* Анімовані бульбашки на фоні */
         .bubble {
             position: absolute;
             background: rgba(255, 255, 255, 0.1);
@@ -51,9 +51,9 @@
 
         .container {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            max-width: 600px;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 500px;
             width: 100%;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
@@ -74,14 +74,14 @@
         h1 {
             color: #2c3e50;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
+            margin-bottom: 20px;
+            font-size: 20px;
         }
 
         .step {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
             background: white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
@@ -94,7 +94,7 @@
         .step b {
             color: #2c3e50;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .contact {
@@ -106,37 +106,45 @@
         .note {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 10px 10px 0;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
         }
 
         .benefits {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
         }
 
         .benefit-item {
-            flex: 1 1 calc(50% - 15px);
-            padding: 15px;
+            padding: 10px;
             background: #f8f9fa;
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            font-size: 13px;
         }
 
         .icon {
-            font-size: 24px;
+            font-size: 20px;
             color: #4ecdc4;
+        }
+
+        ul {
+            margin: 5px 0;
+        }
+
+        li {
+            margin: 3px 0;
         }
     </style>
 </head>
 <body>
     <script>
-        // Створення анімованих бульбашок
         function createBubbles() {
             const body = document.querySelector('body');
             for (let i = 0; i < 20; i++) {
@@ -167,7 +175,7 @@
 
         <div class="step">
             <b>3️⃣ Надайте дані для відправки</b>
-            <ul style="list-style: none; padding-left: 20px;">
+            <ul style="list-style: none; padding-left: 15px;">
                 <li>📝 ПІБ</li>
                 <li>📱 Контактний номер телефону</li>
                 <li>📍 Адреса доставки (Нова Пошта або інша служба)</li>
@@ -186,15 +194,15 @@
             </div>
             <div class="benefit-item">
                 <i class="fas fa-tshirt icon"></i>
-                <span>Допомога з підбором розміру</span>
+                <span>Допомога з підбором</span>
             </div>
             <div class="benefit-item">
                 <i class="fas fa-shipping-fast icon"></i>
-                <span>Швидке обслуговування</span>
+                <span>Швидка доставка</span>
             </div>
             <div class="benefit-item">
                 <i class="fas fa-heart icon"></i>
-                <span>Просте оформлення</span>
+                <span>Просте замовлення</span>
             </div>
         </div>
     </div>
