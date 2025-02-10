@@ -10,7 +10,7 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #5c67f2);
+            background: linear-gradient(135deg, #7ec8e3, #a18cd1, #ff9a9e);
             background-size: 400% 400%;
             animation: gradientAnimation 10s ease infinite;
             color: #2c3e50;
@@ -31,10 +31,11 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             max-width: 400px;
             width: 100%;
             animation: fadeIn 1s ease-in-out;
@@ -66,7 +67,7 @@
         
         .bubble {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             animation: float 8s infinite;
             pointer-events: none;
