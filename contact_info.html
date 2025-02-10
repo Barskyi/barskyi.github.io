@@ -10,7 +10,9 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #5c67f2);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
             color: #2c3e50;
             display: flex;
             justify-content: center;
@@ -18,7 +20,16 @@
             height: 100vh;
             margin: 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .container {
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
@@ -52,9 +63,47 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 8s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) scale(2);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
+    <script>
+        function createBubbles() {
+            const body = document.querySelector('body');
+            for (let i = 0; i < 20; i++) {
+                const bubble = document.createElement('div');
+                bubble.className = 'bubble';
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.width = `${Math.random() * 100 + 20}px`;
+                bubble.style.height = bubble.style.width;
+                bubble.style.animationDelay = `${Math.random() * 8}s`;
+                body.appendChild(bubble);
+            }
+        }
+        createBubbles();
+    </script>
+
     <div class="container">
         <h2>📞 Наші контакти</h2>
         <p class="contact-item">📲 <b>Телефон:</b> +38 097 461 33 25</p>
