@@ -19,7 +19,6 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            text-align: center;
             position: relative;
             overflow: hidden;
         }
@@ -39,27 +38,38 @@
             max-width: 400px;
             width: 100%;
             animation: fadeIn 1s ease-in-out;
+            text-align: left; /* Вирівнюємо текст по лівому краю */
         }
+
         h2 {
             margin-bottom: 15px;
             font-size: 22px;
+            text-align: left; /* Вирівнюємо заголовок по лівому краю */
         }
+
         .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Відступ між іконкою та текстом */
             margin: 10px 0;
             font-size: 16px;
             transition: transform 0.3s ease;
         }
+
         .contact-item:hover {
             transform: scale(1.05);
         }
+
         a {
             color: #e74c3c;
             text-decoration: none;
             font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -106,7 +116,7 @@
     </script>
 
     <div class="container">
-        
+        <h2>Контакти</h2>
         <p class="contact-item">📲 <b>Телефон:</b> +38 097 461 33 25</p>
         <p class="contact-item">📧 <b>Email:</b> <a href="mailto:barskyi69@gmail.com">barskyi69@gmail.com</a></p>
         <p class="contact-item">📸 <b>Instagram:</b> <a href="https://www.instagram.com/insite_bags?igsh=MW41OG9pbzV0cHFvMw==" target="_blank">@insite_bags</a></p>
