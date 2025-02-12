@@ -32,47 +32,62 @@
         .container {
             background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+                        inset 0 1px 2px rgba(255, 255, 255, 0.3);
             max-width: 400px;
             width: 100%;
             animation: fadeIn 1s ease-in-out;
-            text-align: left; /* Вирівнюємо текст по лівому краю */
-        }
-
-        h2 {
-            margin-bottom: 15px;
-            font-size: 22px;
-            text-align: left; /* Вирівнюємо заголовок по лівому краю */
+            text-align: left;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 8px; /* Відступ між іконкою та текстом */
-            margin: 10px 0;
+            gap: 12px;
+            margin: 25px 0;
             font-size: 16px;
-            transition: transform 0.3s ease;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item b {
+            color: #2c3e50;
+            min-width: 90px;
         }
 
         a {
             color: #e74c3c;
             text-decoration: none;
             font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            background: rgba(231, 76, 60, 0.1);
+            color: #c0392b;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .footer-message {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            line-height: 1.5;
         }
         
         .bubble {
@@ -96,6 +111,23 @@
                 opacity: 0;
             }
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 15px;
+                padding: 25px;
+            }
+
+            .contact-item {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -116,11 +148,10 @@
     </script>
 
     <div class="container">
-        
         <p class="contact-item">📲 <b>Телефон:</b> +38 097 461 33 25</p>
-        <p class="contact-item"> 🌐 <b>Офіційний сайт:</b> <a href="https://barbags.com.ua/ua" target="_blank">barbags.com.ua/ua</a></p>
-        <p class="contact-item"> 📸 <b>Instagram:</b> <a href="https://www.instagram.com/insite_bags?igsh=MW41OG9pbzV0cHFvMw==" target="_blank">@insite_bags</a></p>
-        <p style="margin-top: 15px; font-style: italic;">💼 Зв’яжіться з нами — ми завжди раді допомогти вам обрати ідеальну сумку чи аксесуар! 😊</p>
+        <p class="contact-item">🌐 <b>Офіційний сайт:</b> <a href="https://barbags.com.ua/ua" target="_blank">barbags.com.ua/ua</a></p>
+        <p class="contact-item">📸 <b>Instagram:</b> <a href="https://www.instagram.com/insite_bags?igsh=MW41OG9pbzV0cHFvMw==" target="_blank">@insite_bags</a></p>
+        <p class="footer-message">💼 Зв'яжіться з нами — ми завжди раді допомогти вам обрати ідеальну сумку чи аксесуар! 😊</p>
     </div>
 </body>
 </html>
